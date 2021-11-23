@@ -12,10 +12,12 @@ if (choice=="a" or choice=="A"):
     for i in range(x):
         print((x-i-1)*' ' + (2*i+1)*'*')
 
-#Fix why the stars dont appear in line
+#Fix the last row is faulty
 if (choice=="b" or choice=="B"):
-    for i in range(1, x):
-        for j in range(1, x-i):
-            print(" ")
-        for k in range(j+1, x-1+i):
-            print("*")
+    for i in range(1,x+1):
+        for j in range(x-i):
+            print(" ", end ="")
+        for k in range(j+1, x+i-1):
+            print("*", end = "")
+        print("")
+input("Press Enter to continue...")
