@@ -13,8 +13,11 @@ while (f==True):
     while (gr != 'stem' and gr != 'plot'): 
         gr = (input ("Invalid option, try again... (stem/plot): "))
 
-    while (number>1):
+    max = number
 
+    while (number>1):
+        if (number > max):
+            max = number
         if (number%2==0):
             print((number),"Even: ",number,"/ 2 =", number//2)
             if (number//2 == 1):
@@ -32,13 +35,12 @@ while (f==True):
             markerline, stemlines, baseline = plt.stem(
             x, y, linefmt='gray', markerfmt='D', bottom=1.1)
             markerline.set_markerfacecolor('none')
-            plt.title("Stem Graph")
         else: #Plot graph settings
             plt.plot(x,y)
-            plt.title("Plot Graph")
         plt.pause(0.15) #The delay between when each point gets added to the graph animation
         plt.xlabel('Steps')
         plt.ylabel('Numbers')
+        plt.title(('Y =', number,'Peak =', max))
 
     print("The steps needed to reach 1 were:", steps)
     plt.show()
