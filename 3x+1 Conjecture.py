@@ -47,9 +47,9 @@ def graphf(k,l):
 ################################################################################
 f=True
 while (f==True):
-    sel = int(input("Select <1> for a single number or <2> for multiple: "))
-    while (sel != 1 and sel != 2):
-        sel = int(input("Invalid input... try again (1/2)"))
+    sel = (input("Select <1> for a single number or <2> for multiple: "))
+    while (sel != '1' and sel != '2'):
+        sel = (input("Invalid input... try again (1/2)"))
 
     if (sel==1):
         n = int(input ("Select a number to begin the test: "))
