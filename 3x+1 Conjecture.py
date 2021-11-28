@@ -36,7 +36,7 @@ def graphf(k,l):
             plt.legend(z) #Indication on graph of the current number
             plt.xlabel('Steps')
             plt.ylabel('Numbers')
-            plt.title(('Y =', number,'Peak =', max))
+            plt.title((f"Y = {number} Peak = {max} Steps = {steps}"))
 
         print(f"The steps needed for {i} to reach 1 were:", steps)
         plt.pause(2)
