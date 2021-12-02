@@ -3,6 +3,9 @@ import numpy as np
 
 #Function that plots the graph
 def graphf(k,l):
+    if k>l:
+        k,l=l,k
+        
     for i in range(k,l+1):
         number = i
         steps = 0
