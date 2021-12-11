@@ -54,7 +54,7 @@ while (f==True):
     while (sel != '1' and sel != '2'):
         sel = (input("Invalid input... try again (1/2)"))
 
-    if (sel==1):
+    if (sel=='1'):
         n = int(input ("Select a number to begin the test: "))
         m=n
         x=[0] # x-cords of graph
